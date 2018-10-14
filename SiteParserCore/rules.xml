@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<handlers>
+	<handler type="SiteParser.Handlers.PageLoader, SiteParser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"></handler>
+  <handler type="SiteParser.Handlers.Filters.ContentRestrictor, SiteParser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+		<params>
+			<param name="maxSize" value="2000000" /> 
+			<param name="minSize" value="200" />
+			<param name="domain" value="www.site1.ru"/>
+		</params>
+	</handler>
+	<handler type="SiteParser.Handlers.ImgLinkParser, SiteParser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"></handler>
+	<handler type="SiteParser.Handlers.AnchorLinkParser, SiteParser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"></handler>
+	<handler type="SiteParser.Handlers.Filters.UrlFilter, SiteParser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <params>
+      <param name="DisallowPattern" value="profile"/>
+    </params>
+  </handler>
+</handlers>
